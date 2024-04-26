@@ -27,3 +27,24 @@ for (let i = 1; i <= 10; i++) {
     factorial *= i;
     console.log(factorial);
 }
+
+console.log("Task 6")
+let arr = [3,1,4,1,5]
+for (let i = 0; i <= 5; i++) {
+    console.log(arr[i])
+}
+
+console.log("Task 7")
+for (let i = 0; i < arr.length; i++) {
+    console.log(arr.at(-i-1))
+}
+
+console.log("Task 8")
+let cubes = [];
+for (let i = 1; i < 11; i++) {
+    cubes.push(i*i*i);
+    console.log(cubes);
+}
+
+console.log("Task 9")
+let fibs = [];
