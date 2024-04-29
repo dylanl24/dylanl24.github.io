@@ -48,3 +48,20 @@ for (let i = 1; i < 11; i++) {
 
 console.log("Task 9")
 let fibs = [];
+let first = 0;
+let secondNum = 1;
+for (let i = 1; i < 11; i++) {
+    fibs.push (first);
+    let fibo = secondNum;
+    secondNum = secondNum + first;
+    first = fibo;
+    console.log(fibs);
+}
+
+console.log("Task 10")
+let newArr = [];
+
+for (let i = 0; i < arr.length; i++) {
+    newArr.push(arr.at(-i-1))
+}
+console.log(newArr);
