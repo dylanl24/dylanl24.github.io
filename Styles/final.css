@@ -4,3 +4,40 @@
     display: flex;
     gap: 50px;
 }
+
+.home-menu button {
+    size: 50px;
+    border-radius: 10%;
+    padding: 4px;
+    color: #ffffff; 
+    background-color: black;
+    transition: .5s;
+}
+
+.home-menu button:hover {
+    border-radius: 10%;
+    padding: 4px;
+    color: black;
+    background-color: #e0e0e0; 
+}
+
+button {
+    size: 50px;
+    border-color:rgb(0, 153, 255)
+    color: #ffffff; 
+    background-color: rgb(0, 153, 255);
+    transition: .5s;
+}
+
+button:active {
+    transform: scale(.8,.8);
+}
+
+button:hover {
+    size: 50px;
+    border-radius: 10%;
+    border-color:rgb(0, 153, 255)
+    color: rgb(0, 153, 255); 
+    background-color: rgb(255, 255, 255);
+    transition: .5s;
+}
