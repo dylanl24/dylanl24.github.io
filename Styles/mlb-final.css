@@ -1,10 +1,10 @@
 .background {
-    background-color: rgb(0, 183, 255);
+    background-color: dodgerblue;
 }
 
 button {
     size: 50px;
-    border-color:rgb(76, 183, 255)
+    border-color:rgb(76, 183, 255);
     color: white; 
     background-color: rgb(0, 153, 255);
     transition: .5s;
@@ -17,7 +17,7 @@ button:active {
 button:hover {
     size: 50px;
     border-radius: 5%;
-    border-color:rgb(0, 153, 255)
+    border-color:rgb(0, 153, 255);
     color: rgb(0, 153, 255); 
     background-color:rgb(52, 192, 235);
     transition: .5s;
@@ -32,6 +32,14 @@ button:hover {
     transform: scale(1.2,1.2);
     opacity: 1;
     transition: .5s;
+}
+
+.unlikely {
+    color: red;
+}
+
+.contenders {
+    color: orange;
 }
 
 .leaders {
