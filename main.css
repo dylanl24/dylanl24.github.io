@@ -1,4 +1,18 @@
 button {
-    color:cornflowerblue;
+    size: 50px;
+    color:greenyellow;
+    padding: 5%;
 }
+
+.background {
+    background-color:green;
+}
+
+button:hover{
+    size: 65px;
+    transition: .5 seconds;
+
+}
+
+
 
