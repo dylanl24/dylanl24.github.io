@@ -1,7 +1,7 @@
 const form = document.getElementById('scoreForm');
 const tableBody = document.querySelector('#scoreTable tbody');
 
-form.getEventListenerI('addRound', function e())
+form.getEventListenerI('addRound', function e()
     {
     
     e.preventDefault();
@@ -33,4 +33,4 @@ form.getEventListenerI('addRound', function e())
 
 
 
-
+)
