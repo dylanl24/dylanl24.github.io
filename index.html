@@ -9,7 +9,8 @@
 
     </head>
     <body>
-    <form id="scoreForm">
+
+        <form id="golfForm">
         <label for="course">Course Name:</label>
         <input type="text" id="course" required>
 
@@ -28,18 +29,19 @@
         <label for="fairways">Fairways Hit:</label>
         <input type="number" id="fairways" required>
 
-        <button type="newRound">Add Round</button>
-    </form>
-        <table>
+        <button type="addRound">Add Round</button>
+  </form>
+
+        <table id="scoreTable">
             <thead>
-               <tr>                        
-                    <td><input type="text"> </input></td>
-                    <td><input type="number" id="score">  </input></td>
-                    <td><input type="number">  </input></td>
-                    <td><input type="number">  </input></td>
-                    <td><input type="number">  </input></td>
-                    <td><input type="date">  </input></td>                    
-            </tr>
+                <tr>
+                    <th>Course name</th> 
+                    <th>Score</th> 
+                    <th>Putts</th> 
+                    <th>Fairways</th> 
+                    <th>Greens</th>
+                    <th>Date</th> 
+                </tr>
             </thead>
             <tbody></tbody>
         </table>
