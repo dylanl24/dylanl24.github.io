@@ -1,18 +1,24 @@
+body {
+    background-color: #228B22; 
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+
 button {
-    size: 50px;
-    color:greenyellow;
-    padding: 5%;
+    background-color: #90EE90; 
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.2s ease;
 }
 
-.background {
-    background-color:green;
+button:hover {
+    transform: scale(1.1); 
+    background-color: #98FB98; 
 }
-
-button:hover{
-    size: 65px;
-    transition: .5 seconds;
-
-}
-
-
 
