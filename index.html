@@ -29,7 +29,7 @@
         <label for="fairways">Fairways Hit:</label>
         <input type="number" id="fairways" required>
 
-        <button type="addRound">Add Round</button>
+        <button type="submit">Add Round</button>
   </form>
 
         <table id="scoreTable">
@@ -46,7 +46,37 @@
             <tbody></tbody>
         </table>
         <a href=averages.html><button>Averages</button></a>
+    
+    <script>
+    const form = document.getElementById('scoreForm');
+    const tableBody = document.querySelector('#scoreTable tbody');
+
+    form.addEventListener('submit', function (e) {
+    
+    e.preventDefault();
+
+    const course= document.getElementById('course').value;
+    const date= document.getElementById('date').value;
+    const score= document.getElementById('score').value;
+    const putts= document.getElementById('putts').value;
+    const greens= document.getElementById('greens').value;
+    const fairways= document.getElementById('fairways').value;
+
+    const newRow = document.createElement('tr');
+    newRow.innerHTML = `
+        <td>${course}</td>
+        <td>${date}</td>
+        <td>${score}</td>
+        <td>${putts}</td>
+        <td>${greens}</td>
+        <td>${fairways}</td>
+    `;
+
+    tableBody.appendChild(newRow);
+    form.reset();
+    });
+    </script> 
+
     </body>
 </html>
-
 
