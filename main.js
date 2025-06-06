@@ -1,8 +1,7 @@
 const form = document.getElementById('scoreForm');
 const tableBody = document.querySelector('#scoreTable tbody');
 
-form.getEventListenerI('addRound', function e()
-    {
+form.getEventListener('addRound', function (e) {
     
     e.preventDefault();
 
@@ -13,19 +12,16 @@ form.getEventListenerI('addRound', function e()
     const greens= getElementById('greens').value;
     const fairways= getElementById('fairways').value;
 
-    tableBody.insertRow(0);
-    let cell1 = tableBody.insertCell(0);
-    let cell2 = tableBody.insertCell(1);
-    let cell3 = tableBody.insertCell(2);
-    let cell4 = tableBody.insertCell(3);
-    let cell5 = tableBody.insertCell(4);
-    let cell6 = tableBody.insertCell(5);
+    const newRow = document.createElement('tr');
+    newRow.innerHTML = `
+        <td>${course}</td>
+        <td>${date}</td>
+        <td>${score}</td>
+        <td>${putts}</td>
+        <td>${greens}</td>
+        <td>${fairways}</td>
+    `;
 
-    cell1.innerHTML = course;
-    cell2.innerHTML = date;
-    cell3.innerHTML = score;
-    cell4.innerHTML = putts;
-    cell5.innerHTML = greens;
-    cell6.innerHTML = fairways;
-}
-)
+    tableBody.appendChild(newRow);
+    form.reset();
+    });
