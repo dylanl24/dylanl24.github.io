@@ -3,12 +3,13 @@
     <head>
         <meta charset="UTF-8">
         <meta name = "viewport" content ="width=device-width, initial-scale = 1.0">
-        <h1 class = "headers">Score Tracker</h1>
         <link href="main.css" rel="stylesheet"></link>
         
 
     </head>
     <body>
+
+        <h1 class = "headers">Score Tracker</h1>
 
         <form id="scoreForm">
         <label for="course">Course Name:</label>
@@ -36,30 +37,51 @@
             <thead>
                 <tr>
                     <th>Course name</th> 
+                    <th>Date</th> 
                     <th>Score</th> 
                     <th>Putts</th> 
-                    <th>Fairways</th> 
                     <th>Greens</th>
-                    <th>Date</th> 
+                    <th>Fairways</th> 
                 </tr>
             </thead>
             <tbody></tbody>
         </table>
+
+    <div id="averages">
+    <h2>Averages</h2>
+    <p>Score: <span id="avgScore">0</span></p>
+    <p>Putts: <span id="avgPutts">0</span></p>
+    <p>Greens: <span id="avgGreens">0</span></p>
+    <p>Fairways: <span id="avgFairways">0</span></p>
+    </div>
+
     
     <script>
     const form = document.getElementById('scoreForm');
     const tableBody = document.querySelector('#scoreTable tbody');
 
+    let totalRounds = 0;
+    let totalScore = 0;
+    let totalPutts = 0;
+    let totalGreens = 0;
+    let totalFairways = 0;
+
+    const avgScoreSpan = document.getElementById('avgScore');
+    const avgPuttsSpan = document.getElementById('avgPutts');
+    const avgGreensSpan = document.getElementById('avgGreens');
+    const avgFairwaysSpan = document.getElementById('avgFairways');
+
     form.addEventListener('submit', function (e) {
     
     e.preventDefault();
 
+
     const course= document.getElementById('course').value;
     const date= document.getElementById('date').value;
-    const score= document.getElementById('score').value;
-    const putts= document.getElementById('putts').value;
-    const greens= document.getElementById('greens').value;
-    const fairways= document.getElementById('fairways').value;
+    const score= parseInt(document.getElementById('score').value);
+    const putts= parseInt(document.getElementById('putts').value);
+    const greens= parseInt(document.getElementById('greens').value);
+    const fairways= parseInt(document.getElementById('fairways').value);
 
     const newRow = document.createElement('tr');
     newRow.innerHTML = `
@@ -72,6 +94,18 @@
     `;
 
     tableBody.appendChild(newRow);
+
+    totalRounds++;
+    totalScore += score;
+    totalPutts += putts;
+    totalGreens += greens;
+    totalFairways += fairways;
+
+    avgScoreSpan.textContent = (totalScore / totalRounds).toFixed(1);
+    avgPuttsSpan.textContent = (totalPutts / totalRounds).toFixed(1);
+    avgGreensSpan.textContent = (totalGreens / totalRounds).toFixed(1);
+    avgFairwaysSpan.textContent = (totalFairways / totalRounds).toFixed(1);
+
     form.reset();
     });
     </script> 
